@@ -9,11 +9,15 @@ import BreakingNews from './components/BreakingNews';
 
 import data from './fakeData.js'
 import TechNews from './components/TechNews';
+import PoliticalNews from './components/PoliticalNews';
+import EntertainmentNews from './components/EntertainmentNews';
 
 export default function App() {
 
   const breakingNews= data.filter(item => item.category === 'breaking-news')
   const techNews= data.filter(item => item.category === 'tech')
+  const politicalNews= data.filter(item => item.category === 'political')
+  const entertainmentNews= data.filter(item => item.category === 'entertainment')
   
 
   return <Screen>
@@ -28,7 +32,10 @@ export default function App() {
       category: "entertainment"
     }}/>
     <BreakingNews data={breakingNews}/>
+    <PoliticalNews data={politicalNews} />
     <TechNews data={techNews} />
+    <EntertainmentNews data={entertainmentNews} />
+    
   </Screen>
    
   
